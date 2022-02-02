@@ -1,0 +1,47 @@
+:root {
+    --offcanvas-width: 270px;
+    --topNav-height: 56px;
+}
+body {
+    background: linear-gradient(90deg, #f2994a 0%, #f2c94c 100%);
+}
+.heading {
+    font-size: 40px;
+    text-align: center;
+}
+.sidebar-nav {
+    width: var(--offcanvas-width);
+}
+.sidebar-nav:focus {
+    box-shadow: none !important;
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        overflow: auto;
+    }
+    main {
+        margin-left: var(--offcanvas-width);
+    }
+    .sidebar-nav {
+        transform: none;
+        visibility: visible !important;
+        top: 55px;
+        border-radius: 0;
+        left: -5px;
+        /* height: calc(100% - var(--topNav-height)); */
+        height: 100%;
+    }
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+}
+.sidebar-link .right-icon{
+    display: inline-flex;
+}
+.sidebar-link[aria-expanded = "true"] .right-icon {
+    transform: rotate(180deg);
+    transition: .5s;
+}
