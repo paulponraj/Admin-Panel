@@ -1,7 +1,9 @@
 :root {
     --offcanvas-width: 270px;
     --topNav-height: 56px;
-body {
+
+    
+  body {
   background-color: #3b3b98;
   color: #fff;
   font-family: 'Muli', sans-serif;
